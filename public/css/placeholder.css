@@ -52,3 +52,11 @@ body{
 .gg-close-o::after {
     transform: rotate(-45deg)
 }
+
+.profileImage {
+    position:relative;
+    top:20%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+}

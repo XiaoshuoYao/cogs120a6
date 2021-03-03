@@ -1,7 +1,16 @@
+.logo {
+    position:relative;
+    top:20%;
+    display: block;
+    margin: 0 auto;
+    padding: 30px;
+
+}
+
 .collection {
     color: white;
     position: absolute;
-    top: 45%;
+    top: 55%;
     right: 10%;
     width: 35%;
     height: 15%;
@@ -18,7 +27,7 @@
 .profile {
     color: white;
     position: absolute;
-    top: 45%;
+    top: 55%;
     left: 10%;
     width: 35%;
     height: 15%;
@@ -58,7 +67,7 @@
 
 .form{
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 10%;
     width: 80%;
     height: 10%;
@@ -91,12 +100,6 @@ input[type=submit]:hover {
   background-color: #29A0B1;
 }
 
-
-div {
-  border-radius: 5px;
-  background-color: #98D7C2;
-  padding: 20px;
-}
 
 .profile:hover{
     background-color: #29A0B1;

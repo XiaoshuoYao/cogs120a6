@@ -22,7 +22,7 @@
 	<div class='addColText'>Add to:</div>
 
 	<select class='addCol' name="colSelect" onchange = "myFunction(this.value)">
-		<option class='ColText'></option>
+		<option class='ColText'>Select a collection</option>
   		<option class='ColText'>Collection 1</option>
   		<option class='ColText'>Collection 2</option>
   		<option class='ColText'>Collection 3</option>
@@ -73,6 +73,10 @@
 		});
 
 		function myFunction(val){
+			if(val == 'Select a collection'){
+				alert("please select a collection");
+				return;
+			}
 			var r=confirm("Adding the word to "+val);
 			if (r==false){
 				return;

@@ -3,17 +3,17 @@
         {
             "name": "Collection 1",
             "id" : 1,
-            "wordNum" : 20
+            "wordNum" : 0
         },
         {
             "name": "Collection 2",
             "id" : 2,
-            "wordNum" : 35
+            "wordNum" : 0
         },
         {
             "name": "Collection 3",
             "id" : 3,
-            "wordNum" : 108
+            "wordNum" : 0
         }
     ]
 }

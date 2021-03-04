@@ -1,6 +1,7 @@
 var dataC1 = require('../Collection 1.json');
 var dataC2 = require('../Collection 2.json');
 var dataC3 = require('../Collection 3.json');
+var colData = require('../collectionData.json');
 var data;
 
 exports.view = function(req, res){
@@ -35,6 +36,7 @@ exports.addCol = function(req, res){
         }
         if(temp == false){
             dataC1['words'].push(wordData);
+            colData.collections[0].wordNum++;
         }
     }
     if (col == 'Collection 2') {
@@ -46,6 +48,7 @@ exports.addCol = function(req, res){
         }
         if(temp == false){
             dataC2['words'].push(wordData);
+            colData.collections[1].wordNum++;
         }
     }
     if (col == 'Collection 3') {
@@ -57,7 +60,8 @@ exports.addCol = function(req, res){
         }
         if(temp == false){
             dataC3['words'].push(wordData);
+            colData.collections[2].wordNum++;
         }
     }
-
 };
+

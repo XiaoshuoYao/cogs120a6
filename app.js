@@ -9,6 +9,7 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var search = require('./routes/search');
+var AchC = require('./routes/AchC');
 var CPH = require('./routes/CollectionPH');
 var PPH = require('./routes/ProfilePH');
 var GPH = require('./routes/GroupPH');
@@ -50,6 +51,7 @@ app.get('/', login.view);
 app.get('/main', index.view);
 app.get('/collections', colS.view);
 app.get('/search', search.view);
+app.get('/AchC', AchC.view);
 app.post('/search/:col/addCol', CPH.addCol);
 app.post('/:col/search/:word/delete', CPH.deleteWord);
 app.get('/:col/colSearch', viewCol.view);

@@ -111,15 +111,30 @@ input[type=submit]:hover {
 }
 .addCol{
     position: absolute;
-    width: 50%;
-    height: 5%;
-    left: 25%;
-    top: 37%;
+    width: 45%;
+    height: 7%;
+    left: 40%;
+    top: 35%;
 
     background: #98D7C2;
     border-radius: 20px;
     border-color: #2f5e5b;
     font-size: 100%;
+}
+.ColText{
+    position: 'relative';
+    width: 70%;
+    height: 50%;
+    left: 15%;
+    top: 25%;
+}
+.addColText{
+    position: absolute;
+    width: 40%;
+    height: 10%;
+    left: 13%;
+    top: 37%;
+    font-size: 200%;
 }
 .gg-close-o {
     box-sizing: border-box;
@@ -200,8 +215,17 @@ body{
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: absolute;
+    width: 50%;
+    height: 5%;
+    left: 25%;
+    top: 37%;
+
+    background: #98D7C2;
+    border-radius: 20px;
+    border-color: #2f5e5b;
+    font-size: 100%;
+    display: inline-block;
 }
 
 .dropdown-content {

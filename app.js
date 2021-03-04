@@ -50,6 +50,7 @@ app.get('/', login.view);
 app.get('/main', index.view);
 app.get('/collections', colS.view);
 app.get('/search', search.view);
+app.post('/search/:col/addCol', CPH.addCol);
 app.get('/PPH', PPH.view);
 app.get('/GPH', GPH.view);
 app.get('/APH', APH.view);

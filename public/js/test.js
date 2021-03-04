@@ -18,7 +18,6 @@ function initializePage() {
     $(".words").click(collectionSearch);
     $(".select").click(collectionSelecter);
     $(".logout").click(logOut);
-    $(".addCol").click(addCOl);
 }
 
 function backClick(e) {

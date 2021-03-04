@@ -19,17 +19,15 @@
 		<div class='displayText'>{{word}}</div>
 	</div>
 
-	<button class='addCol'>
-		<div class="dropdown">
-			<span>Add to my collection</span>
-			<div class="dropdown-content">
-			<p>Collection 1</p>
-			<p>Collection 2</p>
-			<p>Collection 3</p>
-			</div>
-		</div>
+	<div class='addColText'>Add to:</div>
 
-	</button>
+	<select class='addCol' name="colSelect" onchange = "myFunction(this.value)">
+		<option class='ColText'></option>
+  		<option class='ColText'>Collection 1</option>
+  		<option class='ColText'>Collection 2</option>
+  		<option class='ColText'>Collection 3</option>
+	</select>
+	
 
 	<div class='content'>
 		<div class='explanation'></div>
@@ -73,6 +71,16 @@
 
 			$('.explanation').html(htmlDetail);
 		});
+
+		function myFunction(val){
+			$.ajax({
+				url: 'search/' + val + '/addCol',
+				type: 'POST',
+				contentType: 'application/json',
+				data: JSON.stringify({word: word})
+		})
+			console.log(val);
+		}
 	</script>
 </body>
 </html>

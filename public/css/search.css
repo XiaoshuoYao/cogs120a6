@@ -5,7 +5,6 @@
     left: 13%;
     top: 8%;
 
-    background-color: #ddffe7;
 }
 
 input[type=text], select {
@@ -16,6 +15,7 @@ input[type=text], select {
     border: 3px solid #2f5e5b;
     border-radius: 10px;
     box-sizing: border-box;
+    border-color: grey;
 }
 
 input[type=submit] {
@@ -201,7 +201,7 @@ input[type=submit]:hover {
 }
 
 body{
-    background-color: #ddffe7;
+
 }
 
 .colBack{

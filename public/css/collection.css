@@ -23,19 +23,16 @@
     top: 5%;
     left: 10%;
 
-    background: #98e7cd;
+    background: #98D7c2;
     border-radius: 20px;
 }
 
 .select{
     position: relative;
     max-width: 100%;
-    height: 70%;
+    height: 100%;
     font-size: 150%;
-    
-
-    background: #98D7C2;
-    border-radius: 20px;
+    margin: 20px;
 }
 
 .names{
@@ -61,7 +58,7 @@
     left: 5%;
     top: 20%;
 
-    background: #ddffe7;
+    
     border-radius: 5px solid black;
     box-sizing: border-box;
 }
@@ -74,15 +71,13 @@
     font-size: 150%;
 }
 
-body{
-    background-color: #ddffe7;
-}
 
 p{
-    color: white;
+    color: #167D7F;
 }
 
 h4{
+    text-align: center;
     color: white;
 }
 

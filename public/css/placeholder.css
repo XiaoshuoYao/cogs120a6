@@ -60,3 +60,8 @@ body{
     margin: 0 auto;
     padding: 10px;
 }
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}

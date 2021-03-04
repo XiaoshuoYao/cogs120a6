@@ -73,13 +73,23 @@
 		});
 
 		function myFunction(val){
+			var r=confirm("Adding the word to "+val);
+			if (r==false){
+				return;
+			}		
 			$.ajax({
 				url: 'search/' + val + '/addCol',
 				type: 'POST',
 				contentType: 'application/json',
-				data: JSON.stringify({word: word})
-		})
-			alert("Word added to " + val);
+				data: JSON.stringify({word: word}),
+				success: function (data) {
+               		alert("Word added to " + val);
+				}, 
+				error: function (error) {
+					alert("Word already in " + val);
+				}
+			})
+			
 			console.log(val);
 		}
 	</script>

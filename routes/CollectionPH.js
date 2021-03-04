@@ -21,18 +21,43 @@ exports.addCol = function(req, res){
     var col = req.params.col;
     word = req.body.word;
     console.log(col);
+    temp = false;
     var wordData = {
         "word": word,
         "count" : 1
     }
     if (col == 'Collection 1') {
-        dataC1['words'].push(wordData);
+        for(i = 0; i < dataC1.words.length; i++){
+            if(dataC1.words[i].word == word) {
+                temp = true;
+                throw "Error";
+            }
+        }
+        if(temp == false){
+            dataC1['words'].push(wordData);
+        }
     }
     if (col == 'Collection 2') {
-        dataC2['words'].push(wordData);
+        for(i = 0; i < dataC2.words.length; i++){
+            if(dataC2.words[i].word == word) {
+                temp = true;
+                throw "Error";
+            }
+        }
+        if(temp == false){
+            dataC2['words'].push(wordData);
+        }
     }
     if (col == 'Collection 3') {
-        dataC3['words'].push(wordData);
+        for(i = 0; i < dataC3.words.length; i++){
+            if(dataC3.words[i].word == word) {
+                temp = true;
+                throw "Error";
+            }
+        }
+        if(temp == false){
+            dataC3['words'].push(wordData);
+        }
     }
 
 };

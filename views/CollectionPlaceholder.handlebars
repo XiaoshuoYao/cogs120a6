@@ -7,19 +7,25 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/placeholder.css" rel="stylesheet">
 	<link href="/css/collection.css" rel="stylesheet">
+	<link href='https://css.gg/arrow-left-o.css' rel='stylesheet'>
+	<link href='https://css.gg/trash.css' rel='stylesheet'>
 </head>
 
 <body>
-    <div class="back" id='CPH'>
-		<i class="gg-close-o"></i>
+    <div class="backColSel" id='CPH'>
+		<i class="gg-arrow-left-o"></i>
 	</div>
 
 	<div class="colContainer" style="float">
+		
 		{{#each words}}
-			<div class="words" id={{word}}>
+		{{#if display}}
+			<div class="words" id={{colID}}>
 				<h4 class="word">{{word}}</h4>
 			</div>
+		{{/if}}
 		{{/each}}
+		
 	</div>
     
 

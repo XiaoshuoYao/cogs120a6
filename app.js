@@ -18,7 +18,7 @@ var RPH = require('./routes/RecordPH');
 var SPH = require('./routes/SettingsPH');
 var colS = require('./routes/colselecter');
 var login = require('./routes/login');
-var addCol = require('./routes/addCol');
+var viewCol = require('./routes/viewCol');
 // Example route
 // var user = require('./routes/user');
 
@@ -51,13 +51,14 @@ app.get('/main', index.view);
 app.get('/collections', colS.view);
 app.get('/search', search.view);
 app.post('/search/:col/addCol', CPH.addCol);
+app.post('/:col/search/:word/delete', CPH.deleteWord);
+app.get('/:col/colSearch', viewCol.view);
 app.get('/PPH', PPH.view);
 app.get('/GPH', GPH.view);
 app.get('/APH', APH.view);
 app.get('/AchPH', AchPH.view);
 app.get('/RPH', RPH.view);
 app.get('/SPH', SPH.view);
-app.get('/addCol', addCol.view)
 app.get('/:name', CPH.view);
 
 

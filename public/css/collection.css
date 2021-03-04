@@ -66,6 +66,14 @@
     box-sizing: border-box;
 }
 
+.delete{
+    position: relative;
+    max-width: 20%;
+    height: 70%;
+    right: 5%;
+    font-size: 150%;
+}
+
 body{
     background-color: #ddffe7;
 }
@@ -77,6 +85,8 @@ p{
 h4{
     color: white;
 }
+
+
 
 .word:hover{
     background-color: #29A0B1;

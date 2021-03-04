@@ -23,11 +23,13 @@ exports.addCol = function(req, res){
     word = req.body.word;
     console.log(col);
     temp = false;
-    var wordData = {
-        "word": word,
-        "count" : 1
-    }
+    
     if (col == 'Collection 1') {
+        var wordData = {
+            "word": word,
+            "colID" : 1,
+            "display": true
+        }
         for(i = 0; i < dataC1.words.length; i++){
             if(dataC1.words[i].word == word) {
                 temp = true;
@@ -40,6 +42,11 @@ exports.addCol = function(req, res){
         }
     }
     if (col == 'Collection 2') {
+        var wordData = {
+            "word": word,
+            "colID" : 2,
+            "display": true
+        }
         for(i = 0; i < dataC2.words.length; i++){
             if(dataC2.words[i].word == word) {
                 temp = true;
@@ -52,6 +59,11 @@ exports.addCol = function(req, res){
         }
     }
     if (col == 'Collection 3') {
+        var wordData = {
+            "word": word,
+            "colID" : 3,
+            "display": true
+        }
         for(i = 0; i < dataC3.words.length; i++){
             if(dataC3.words[i].word == word) {
                 temp = true;
@@ -64,4 +76,41 @@ exports.addCol = function(req, res){
         }
     }
 };
+
+exports.deleteWord = function(req, res){
+    var word = req.params.word;
+    var col = req.params.col;
+    console.log(col);
+    deleted = false;
+    switch (col) {
+        case '1':
+            for(i = 0; i < dataC1.words.length; i++){
+                if(dataC1.words[i].word == word) {
+                    delete dataC1.words[i].word;
+                    dataC1.words[i].display = false;
+                    colData.collections[0].wordNum--;
+                    return 1;
+                }
+            }
+        case '2':
+            for(i = 0; i < dataC2.words.length; i++){
+                if(dataC2.words[i].word == word) {
+                    delete dataC2.words[i].word;
+                    dataC2.words[i].display = false;
+                    colData.collections[1].wordNum--;
+                    return 1;
+                }
+            }
+        case '3':
+            for(i = 0; i < dataC3.words.length; i++){
+                if(dataC3.words[i].word == word) {
+                    delete dataC3.words[i].word;
+                    dataC3.words[i].display = false;
+                    colData.collections[2].wordNum--;
+                    return 1;
+                }
+            }
+    }
+    throw "errer";
+}  
 

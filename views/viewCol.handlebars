@@ -6,10 +6,11 @@
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/search.css" rel="stylesheet">
+    <link href='https://css.gg/arrow-left-o.css' rel='stylesheet'>
 </head>
 
 <body>
-	<div class='close'><i class="gg-close-o"></i></div>
+	<div class='colBack' id={{colID}}><i class="gg-arrow-left-o"></i></div>
 
 	<form action = '/search' class = 'search'>
 		<input type="text" id="word" name='word' placeholder="Type in the word you want to search"><br>
@@ -19,23 +20,15 @@
 		<div class='displayText'>{{word}}</div>
 	</div>
 
-	<div class='addColText'>Add to:</div>
-
-	<select class='addCol' name="colSelect" onchange = "myFunction(this.value)">
-		<option class='ColText'>Select a collection</option>
-  		<option class='ColText'>Collection 1</option>
-  		<option class='ColText'>Collection 2</option>
-  		<option class='ColText'>Collection 3</option>
-	</select>
-	
+	<button class='deleteText' onclick="myFunction({{colID}})">Delete {{word}} from collection {{colID}}</button>	
 
 	<div class='content'>
 		<div class='explanation'></div>
 	</div>
 
-	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script src="js/test.js"></script>
+	<script src="../js/jquery-1.11.0.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/test.js"></script>
 	<script>
 		function getUrlParam(name) {
 			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -73,28 +66,22 @@
 		});
 
 		function myFunction(val){
-			if(val == 'Select a collection'){
-				alert("please select a collection");
-				return;
-			}
-			var r=confirm("Adding the word to "+val);
+			var r=confirm("Deleting the word?");
 			if (r==false){
 				return;
 			}		
 			$.ajax({
-				url: './search/' + val + '/addCol',
+				url: 'search/'+word+'/delete',
 				type: 'POST',
 				contentType: 'application/json',
-				data: JSON.stringify({word: word}),
+				data: JSON.stringify({word: word,col: val}),
 				success: function (data) {
-               		alert("Word added to " + val);
+               		alert("Word deleted");
 				}, 
 				error: function (error) {
-					alert("Word already in " + val);
+					alert("Word not existed in collections");
 				}
 			})
-			
-			console.log(val);
 		}
 	</script>
 </body>

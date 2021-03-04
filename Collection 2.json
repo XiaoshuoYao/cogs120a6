@@ -1,5 +1,15 @@
 {
+    "col" : 2,
     "words": [
-        
+        {
+            "word": "word",
+            "colID": 2,
+            "display": true
+        },
+        {
+            "word": "test",
+            "colID": 2,
+            "display": true
+        }
     ]
 }

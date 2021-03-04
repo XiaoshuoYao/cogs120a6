@@ -9,12 +9,12 @@ body{
     background-color: #ddffe7;
 }
 
-.back{
-    position: absolute;
-    width: 3%;
-    height: 3%;
-    left: 2%;
-    top: 1%;
+.backProfile{
+  position: absolute;
+  width: 3%;
+  height: 3%;
+  left: 2%;
+  top: 1%;
 }
 
 .gg-close-o {

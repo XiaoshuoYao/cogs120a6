@@ -1,5 +1,20 @@
-{
+{   
+    "col" : 1,
     "words": [
-        
+        {
+            "word": "word",
+            "colID": 1,
+            "display": true
+        },
+        {
+            "word": "test",
+            "colID": 1,
+            "display": true
+        },
+        {
+            "word": "delete",
+            "colID": 1,
+            "display": true
+        }
     ]
 }

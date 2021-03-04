@@ -3,12 +3,12 @@
         {
             "name": "Collection 1",
             "id" : 1,
-            "wordNum" : 0
+            "wordNum" : 3
         },
         {
             "name": "Collection 2",
             "id" : 2,
-            "wordNum" : 0
+            "wordNum" : 2
         },
         {
             "name": "Collection 3",

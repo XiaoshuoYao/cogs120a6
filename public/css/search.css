@@ -202,7 +202,12 @@ input[type=submit]:hover {
 
 body{
     background-color: #ddffe7;
- }
+}
+
+.colBack{
+    top: 1%;
+    left: 2%
+}
 
 .colAdded{
     position: absolute;
@@ -214,32 +219,15 @@ body{
     font-size: 150%;
 }
 
-.dropdown {
+.deleteText{
     position: absolute;
-    width: 50%;
-    height: 5%;
-    left: 25%;
-    top: 37%;
+    width: 70%;
+    height: 7%;
+    left: 15%;
+    top: 35%;
 
     background: #98D7C2;
     border-radius: 20px;
     border-color: #2f5e5b;
     font-size: 100%;
-    display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-
-.dropdown-content p:hover {background-color: #b2b2b2}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }

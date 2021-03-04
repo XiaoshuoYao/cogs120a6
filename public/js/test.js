@@ -5,6 +5,7 @@ $(document).ready(function() {
 function initializePage() {
 	//in main page
 	$(".back").click(backClick);
+    $(".colBack").click(colBackClick);
     $(".close").click(closeClick);
     $(".profile").click(ProfileClick);
     $(".collection").click(CollectionClick);
@@ -18,10 +19,21 @@ function initializePage() {
     $(".words").click(collectionSearch);
     $(".select").click(collectionSelecter);
     $(".logout").click(logOut);
+    $(".backColSel").click(backColSel);
 }
 
 function backClick(e) {
     window.history.go(-1);
+}
+
+function colBackClick(e) {
+    link = $(this).attr('id');
+    console.log(link);
+    window.location.href='/Collection '+link;
+}
+
+function backColSel(e){
+    window.location.href='/collections';
 }
 
 function closeClick(e){
@@ -34,7 +46,7 @@ function backProfileClick(e) {
 }
 
 function CollectionClick(e) {
-    window.location.href='collections';
+    window.location.href='/collections';
 }
 
 function ProfileClick(e) {
@@ -76,7 +88,8 @@ function ProfileGroupClick(e){
 
 function collectionSearch(e){
     var word = $(this).text();
-    window.location.href='./search?word='+word;
+    var col = $(this).attr('id');
+    window.location.href='./'+ col +'/colSearch?word='+word;
 }
 
 function logOut(e){

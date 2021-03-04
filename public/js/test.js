@@ -42,7 +42,7 @@ function closeClick(e){
 
 function backProfileClick(e) {
     // prevent the page from reloading
-    window.location.href='PPH';
+    window.location.href='./PPH';
 }
 
 function CollectionClick(e) {

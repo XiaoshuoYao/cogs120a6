@@ -43,34 +43,40 @@
 			if (r != null) return unescape(r[2]); return null;
 		}
 		var word = getUrlParam('word');
-		const settings = {
-			"async": true,
-			"crossDomain": true,
-			"url": "https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry="+word,
-			"method": "GET",
-			"headers": {
-				"x-rapidapi-key": "1db4c8f7e1msh630a5ef79301c90p19a55bjsn4e6d426ef3c4",
-				"x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
-			}
-		};
+		if(word == ''){
+			alert("Please type in a word");
+		}
+		else{
+			const settings = {
+				"async": true,
+				"crossDomain": true,
+				"url": "https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry="+word,
+				"method": "GET",
+				"headers": {
+					"x-rapidapi-key": "1db4c8f7e1msh630a5ef79301c90p19a55bjsn4e6d426ef3c4",
+					"x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
+				}
+			};
 
-		console.log(word);
+			console.log(word);
 
-		$.ajax(settings).done(function(response) {
-			console.log(response);
-			if(response.result_msg == "Entry word not found"){
-				var htmlDetail = '<p>Word not found</p>'
-			}
-			else{
-				var htmlDetail =
-				'<p>' + response.meaning['noun'] + '</p>' +
-				'<p>' + response.meaning['adjective'] + '</p>' +
-				'<p>' + response.meaning['adverb'] + '</p>' +
-				'<p>' + response.meaning['verb'] + '</p>';
-			}
+			$.ajax(settings).done(function(response) {
+				console.log(response);
+				if(response.result_msg == "Entry word not found"){
+					var htmlDetail = '<p>Word not found</p>'
+				}
+				else{
+					var htmlDetail =
+					'<p>' + response.meaning['noun'] + '</p>' +
+					'<p>' + response.meaning['adjective'] + '</p>' +
+					'<p>' + response.meaning['adverb'] + '</p>' +
+					'<p>' + response.meaning['verb'] + '</p>';
+				}
 
-			$('.explanation').html(htmlDetail);
-		});
+				$('.explanation').html(htmlDetail);
+			});
+		}
+		
 
 		function myFunction(val){
 			if(val == 'Select a collection'){

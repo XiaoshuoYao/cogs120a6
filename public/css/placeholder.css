@@ -1,7 +1,7 @@
 .content {
-    position: fixed;
+    position: absolute;
     top: 25%;
-    left: 20%;
+    left: 30%;
     font-size: 150%;
 }
 

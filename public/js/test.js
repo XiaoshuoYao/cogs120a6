@@ -64,7 +64,10 @@ function GroupClick(e) {
 function AccountClick(e) {
     // prevent the page from reloading
     window.location.href='APH';
+	console.log("account arrived");
+	//checkLoginState()
 }
+
 
 function Achievementlick(e) {
     // prevent the page from reloading

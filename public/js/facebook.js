@@ -15,6 +15,10 @@ function statusChangeCallback(response) {
     // Logged into your app and Facebook.
         console.log('Successfully logged in with Facebook');
          FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
+         window.location.href='/main';
+  } else {
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this webpage.';
   }
 }
 
@@ -25,6 +29,7 @@ function changeUser(response){
     })
 
     $(".content #name").text(response.name);
-    $(".profile img").attr("src",response.picture.data.url)
-    window.location.href='/main';
+    $(".profileImage").attr("src",response.picture.data.url)
+    console.log(response.picture.data.url);
+
 }

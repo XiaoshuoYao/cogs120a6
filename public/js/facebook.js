@@ -24,6 +24,7 @@ function changeUser(response){
         $(".facebookLogin p").hide();
     })
 
-    $("#name").text(response.name);
-    $("img").attr("src",response.picture.data.url)
+    $(".content #name").text(response.name);
+    $(".profile img").attr("src",response.picture.data.url)
+    window.location.href='/main';
 }

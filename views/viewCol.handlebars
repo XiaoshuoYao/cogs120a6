@@ -75,13 +75,9 @@
 				type: 'POST',
 				contentType: 'application/json',
 				data: JSON.stringify({word: word,col: val}),
-				success: function (data) {
-               		alert("Word deleted");
-				}, 
-				error: function (error) {
-					alert("Word not existed in collections");
-				}
 			})
+			alert("Word deleted");
+			window.location.href='/Collection '+val;
 		}
 	</script>
 </body>

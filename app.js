@@ -57,7 +57,7 @@ app.post('/:col/search/:word/delete', CPH.deleteWord);
 app.get('/:col/colSearch', viewCol.view);
 app.get('/PPH', PPH.view);
 app.get('/GPH', GPH.view);
-app.get('/APH', APH.view);
+app.get('/APH', index.viewAcount);
 app.get('/AchPH', AchPH.view);
 app.get('/RPH', RPH.view);
 app.get('/SPH', SPH.view);

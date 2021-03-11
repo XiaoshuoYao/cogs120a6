@@ -2,20 +2,36 @@ var dataC1 = require('../Collection 1.json');
 var dataC2 = require('../Collection 2.json');
 var dataC3 = require('../Collection 3.json');
 var colData = require('../collectionData.json');
+var nullSet = require('../collectionN.json');
 var data;
 
 exports.view = function(req, res){
     var col = req.params.name;
     if (col == 'Collection 1') {
-        data = dataC1;
+        if(colData.collections[0].wordNum == 0){
+            res.render('emptyCol', nullSet);
+        }
+        else{
+            res.render('CollectionPlaceholder', dataC1);
+        }
     }
     if (col == 'Collection 2') {
-        data = dataC2;
+        if(colData.collections[1].wordNum == 0){
+            res.render('emptyCol', nullSet);
+        }
+        else{
+            res.render('CollectionPlaceholder', dataC2);
+        }
     }
     if (col == 'Collection 3') {
-        data = dataC3;
+        if(colData.collections[2].wordNum == 0){
+            res.render('emptyCol', nullSet);
+        }
+        else{
+            res.render('CollectionPlaceholder', dataC3);
+        }
     }
-    res.render('CollectionPlaceholder', data);
+    
 };
 
 exports.addCol = function(req, res){    
@@ -89,7 +105,7 @@ exports.deleteWord = function(req, res){
                     delete dataC1.words[i].word;
                     dataC1.words[i].display = false;
                     colData.collections[0].wordNum--;
-                    return 1;
+                    return;
                 }
             }
         case '2':
@@ -98,7 +114,7 @@ exports.deleteWord = function(req, res){
                     delete dataC2.words[i].word;
                     dataC2.words[i].display = false;
                     colData.collections[1].wordNum--;
-                    return 1;
+                    return;
                 }
             }
         case '3':
@@ -107,10 +123,10 @@ exports.deleteWord = function(req, res){
                     delete dataC3.words[i].word;
                     dataC3.words[i].display = false;
                     colData.collections[2].wordNum--;
-                    return 1;
+                    return;
                 }
             }
     }
-    throw "errer";
+    throw "error";
 }  
 

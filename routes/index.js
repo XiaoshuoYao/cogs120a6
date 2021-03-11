@@ -3,12 +3,14 @@
  */
 var data = require('../accounts.json');
 exports.view = function(req, res){
-  var account = {
-    "username": req.query.username,
-    "password" : req.query.password,
+  if(req.query.username != undefined){
+    var account = {
+      "username": req.query.username,
+      "password" : req.query.password,
+    }
+    console.log(account);
+    data['profiles'].push(account);
   }
-  console.log(account);
-  data['profiles'].push(account);
   res.render('index');
 };
 

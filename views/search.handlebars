@@ -94,12 +94,13 @@
 				data: JSON.stringify({word: word}),
 				success: function (data) {
                		alert("Word added to " + val);
+					return;
 				}, 
 				error: function (error) {
 					alert("Word already in " + val);
+					return;
 				}
 			})
-			
 			console.log(val);
 		}
 	</script>

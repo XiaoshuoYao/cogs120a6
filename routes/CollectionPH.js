@@ -55,6 +55,11 @@ exports.addCol = function(req, res){
         if(temp == false){
             dataC1['words'].push(wordData);
             colData.collections[0].wordNum++;
+            var dataW = {
+                "word": word,
+                "colID": col
+            }
+            res.render('viewCol', dataW);
         }
     }
     if (col == 'Collection 2') {
@@ -72,6 +77,11 @@ exports.addCol = function(req, res){
         if(temp == false){
             dataC2['words'].push(wordData);
             colData.collections[1].wordNum++;
+            var dataW = {
+                "word": word,
+                "colID": col
+            }
+            res.render('viewCol', dataW);
         }
     }
     if (col == 'Collection 3') {
@@ -89,6 +99,11 @@ exports.addCol = function(req, res){
         if(temp == false){
             dataC3['words'].push(wordData);
             colData.collections[2].wordNum++;
+            var dataW = {
+                "word": word,
+                "colID": col
+            }
+            res.render('viewCol', dataW);
         }
     }
 };

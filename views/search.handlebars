@@ -64,6 +64,8 @@
 				console.log(response);
 				if(response.result_msg == "Entry word not found"){
 					var htmlDetail = '<p>Word not found, please enter a valid English word!</p>'
+					$(".addColText").hide();
+					$(".addCol").hide();
 				}
 				else{
 					var htmlDetail =

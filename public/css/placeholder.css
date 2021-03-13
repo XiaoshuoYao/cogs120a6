@@ -5,7 +5,7 @@
     font-size: 150%;
 }
 
-body{
+body {
     
 }
 
@@ -72,4 +72,8 @@ body{
     height: 3%;
     left: 2%;
     top: 1%;
+}
+.header{
+    text-align: center;
+    padding-top: 20%;
 }

@@ -233,3 +233,7 @@ body{
     border-color: #2f5e5b;
     font-size: 100%;
 }
+.header{
+    text-align: center;
+    padding-top: 20%;
+}

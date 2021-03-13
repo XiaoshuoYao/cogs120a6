@@ -66,3 +66,8 @@ body{
 .feb {width: 70%; background-color: #29A0B1;} /* Blue */
 .mar {width: 50%; background-color: #29A0B1;} /* Red */
 .apr {width: 40%; background-color: #29A0B1;} /* Dark Grey */
+
+.header{
+    text-align: center;
+    padding-top: 20%;
+}

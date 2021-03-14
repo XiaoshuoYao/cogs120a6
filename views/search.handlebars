@@ -45,6 +45,10 @@
 		var word = getUrlParam('word');
 		if(word == ''){
 			alert("Please type in a word");
+			var htmlDetail = '<p>Please enter an English word!</p>'
+			$(".addColText").hide();
+			$(".addCol").hide();
+			$('.explanation').html(htmlDetail);
 		}
 		else{
 			const settings = {
